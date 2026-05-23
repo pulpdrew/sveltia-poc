@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: pulpdrew/sveltia-poc
+
+media_folder: /public/media
+public_folder: /media
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: /src/content/blog
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: pubDate, widget: datetime, type: date }
+      - { label: Description, name: description, widget: string }
+      - { label: Body, name: body, widget: richtext }
